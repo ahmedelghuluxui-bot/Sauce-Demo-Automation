@@ -1,0 +1,5 @@
+# إخبار جيتهاب بتجاهل التقارير والملفات التلقائية من إحصائيات اللغات
+test-output/**/*.html linguist-documentation=true
+test-output/**/*.css linguist-documentation=true
+test-output/**/*.js linguist-documentation=true
+target/ linguist-vendored=true
