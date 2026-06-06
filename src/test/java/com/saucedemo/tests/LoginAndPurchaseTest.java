@@ -10,13 +10,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.saucedemo.pages.InventoryPage;
 import com.saucedemo.pages.LoginPage;
+import com.saucedemo.pages.ProductDetailsPage;
 
 public class LoginAndPurchaseTest {
     
     WebDriver driver;
     LoginPage loginPage;
     InventoryPage inventoryPage;
-
+    ProductDetailsPage productDetailsPage;
     public void p() {
       try {
        Thread.sleep(9000);
@@ -35,6 +36,7 @@ public class LoginAndPurchaseTest {
         loginPage = new LoginPage(driver);
         inventoryPage = new InventoryPage(driver);
         p(); 
+        productDetailsPage = new ProductDetailsPage(driver);
     }
 
     // WORKFLOW 1: End-to-End Successful Purchase
