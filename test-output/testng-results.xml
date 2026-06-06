@@ -2,52 +2,52 @@
 <testng-results ignored="0" total="9" passed="6" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-06T22:29:36 GMT+02:00" name="Default suite" finished-at="2026-06-06T22:30:33 GMT+02:00" duration-ms="57176">
+  <suite started-at="2026-06-06T22:34:42 GMT+02:00" name="Default suite" finished-at="2026-06-06T22:35:40 GMT+02:00" duration-ms="58385">
     <groups>
     </groups>
-    <test started-at="2026-06-06T22:29:36 GMT+02:00" name="Default test" finished-at="2026-06-06T22:30:33 GMT+02:00" duration-ms="57176">
+    <test started-at="2026-06-06T22:34:42 GMT+02:00" name="Default test" finished-at="2026-06-06T22:35:40 GMT+02:00" duration-ms="58385">
       <class name="com.saucedemo.tests.LoginAndPurchaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:36 GMT+02:00" name="setUp" finished-at="2026-06-06T22:29:40 GMT+02:00" duration-ms="3781" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:42 GMT+02:00" name="setUp" finished-at="2026-06-06T22:34:45 GMT+02:00" duration-ms="3266" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSuccessfulPurchaseWorkflow()[pri:1, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:40 GMT+02:00" name="testSuccessfulPurchaseWorkflow" description="Verify user can login, add a specific product, and validate its data integrity at checkout" finished-at="2026-06-06T22:29:41 GMT+02:00" duration-ms="1029" status="PASS">
+        <test-method signature="testSuccessfulPurchaseWorkflow()[pri:1, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:45 GMT+02:00" name="testSuccessfulPurchaseWorkflow" description="Verify user can login, add a specific product, and validate its data integrity at checkout" finished-at="2026-06-06T22:34:46 GMT+02:00" duration-ms="936" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSuccessfulPurchaseWorkflow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:41 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:29:41 GMT+02:00" duration-ms="196" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:46 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:34:46 GMT+02:00" duration-ms="194" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:41 GMT+02:00" name="setUp" finished-at="2026-06-06T22:29:43 GMT+02:00" duration-ms="2276" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:47 GMT+02:00" name="setUp" finished-at="2026-06-06T22:34:49 GMT+02:00" duration-ms="2744" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLockedOutUserWorkflow()[pri:2, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:43 GMT+02:00" name="testLockedOutUserWorkflow" description="Verify appropriate error message is displayed for locked out users" finished-at="2026-06-06T22:29:43 GMT+02:00" duration-ms="254" status="PASS">
+        <test-method signature="testLockedOutUserWorkflow()[pri:2, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:49 GMT+02:00" name="testLockedOutUserWorkflow" description="Verify appropriate error message is displayed for locked out users" finished-at="2026-06-06T22:34:49 GMT+02:00" duration-ms="231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLockedOutUserWorkflow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:43 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:29:43 GMT+02:00" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:49 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:34:50 GMT+02:00" duration-ms="138" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:43 GMT+02:00" name="setUp" finished-at="2026-06-06T22:29:46 GMT+02:00" duration-ms="2871" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:50 GMT+02:00" name="setUp" finished-at="2026-06-06T22:34:52 GMT+02:00" duration-ms="2441" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAllProductsDynamicStructure()[pri:3, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:46 GMT+02:00" name="testAllProductsDynamicStructure" description="Loop through all products and validate their details page structure" finished-at="2026-06-06T22:29:48 GMT+02:00" duration-ms="1327" status="PASS">
+        <test-method signature="testAllProductsDynamicStructure()[pri:3, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:52 GMT+02:00" name="testAllProductsDynamicStructure" description="Loop through all products and validate their details page structure" finished-at="2026-06-06T22:34:54 GMT+02:00" duration-ms="1458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllProductsDynamicStructure -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:48 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:29:48 GMT+02:00" duration-ms="149" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:54 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:34:54 GMT+02:00" duration-ms="141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:48 GMT+02:00" name="setUp" finished-at="2026-06-06T22:29:50 GMT+02:00" duration-ms="2604" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:54 GMT+02:00" name="setUp" finished-at="2026-06-06T22:34:57 GMT+02:00" duration-ms="3323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:50 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:29:51 GMT+02:00" duration-ms="834" status="PASS">
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:57 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:34:58 GMT+02:00" duration-ms="908" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -68,15 +68,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllUserProfilesMatrix -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:51 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:29:51 GMT+02:00" duration-ms="159" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:58 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:34:58 GMT+02:00" duration-ms="171" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:51 GMT+02:00" name="setUp" finished-at="2026-06-06T22:29:54 GMT+02:00" duration-ms="2371" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:34:58 GMT+02:00" name="setUp" finished-at="2026-06-06T22:35:01 GMT+02:00" duration-ms="3054" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:54 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:29:54 GMT+02:00" duration-ms="223" status="PASS">
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:01 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:35:01 GMT+02:00" duration-ms="225" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,15 +97,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllUserProfilesMatrix -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:54 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:29:54 GMT+02:00" duration-ms="131" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:01 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:35:01 GMT+02:00" duration-ms="147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:54 GMT+02:00" name="setUp" finished-at="2026-06-06T22:29:57 GMT+02:00" duration-ms="2424" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:01 GMT+02:00" name="setUp" finished-at="2026-06-06T22:35:04 GMT+02:00" duration-ms="2619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:29:57 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:30:07 GMT+02:00" duration-ms="10780" status="FAIL">
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:04 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:35:15 GMT+02:00" duration-ms="10743" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -131,9 +131,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6dea9415155a2462d535796918675510, findElement {value=inventory_item_name, using=class name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.54, chrome: {chromedriverVersion: 149.0.7827.54 (42ce21f112d0..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65250}, goog:processID: 62496, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65250/devtoo..., se:cdpVersion: 149.0.7827.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6dea9415155a2462d535796918675510]]>
+Command: [badc1e19dfca03e8500eb567fd70e32b, findElement {using=class name, value=inventory_item_name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.54, chrome: {chromedriverVersion: 149.0.7827.54 (42ce21f112d0..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56469}, goog:processID: 45616, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56469/devtoo..., se:cdpVersion: 149.0.7827.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: badc1e19dfca03e8500eb567fd70e32b]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".inventory_item_name"}
@@ -142,9 +142,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6dea9415155a2462d535796918675510, findElement {value=inventory_item_name, using=class name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.54, chrome: {chromedriverVersion: 149.0.7827.54 (42ce21f112d0..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65250}, goog:processID: 62496, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65250/devtoo..., se:cdpVersion: 149.0.7827.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6dea9415155a2462d535796918675510
+Command: [badc1e19dfca03e8500eb567fd70e32b, findElement {using=class name, value=inventory_item_name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.54, chrome: {chromedriverVersion: 149.0.7827.54 (42ce21f112d0..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56469}, goog:processID: 45616, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56469/devtoo..., se:cdpVersion: 149.0.7827.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: badc1e19dfca03e8500eb567fd70e32b
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -192,15 +192,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllUserProfilesMatrix -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:30:07 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:30:08 GMT+02:00" duration-ms="172" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:15 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:35:15 GMT+02:00" duration-ms="172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:30:08 GMT+02:00" name="setUp" finished-at="2026-06-06T22:30:10 GMT+02:00" duration-ms="2909" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:15 GMT+02:00" name="setUp" finished-at="2026-06-06T22:35:17 GMT+02:00" duration-ms="2408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:30:10 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:30:16 GMT+02:00" duration-ms="5886" status="PASS">
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:17 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:35:23 GMT+02:00" duration-ms="5871" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -221,15 +221,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllUserProfilesMatrix -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:30:16 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:30:16 GMT+02:00" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:23 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:35:23 GMT+02:00" duration-ms="159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:30:16 GMT+02:00" name="setUp" finished-at="2026-06-06T22:30:19 GMT+02:00" duration-ms="2176" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:23 GMT+02:00" name="setUp" finished-at="2026-06-06T22:35:26 GMT+02:00" duration-ms="2234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:30:19 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:30:29 GMT+02:00" duration-ms="10785" status="FAIL">
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:26 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:35:37 GMT+02:00" duration-ms="10803" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -255,9 +255,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d5650d141ffebc90f49a7051f4651ac3, findElement {value=[data-test='error'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.54, chrome: {chromedriverVersion: 149.0.7827.54 (42ce21f112d0..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60841}, goog:processID: 58352, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60841/devtoo..., se:cdpVersion: 149.0.7827.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d5650d141ffebc90f49a7051f4651ac3]]>
+Command: [84dd176e4edabedc8049f8788c73e221, findElement {using=css selector, value=[data-test='error']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.54, chrome: {chromedriverVersion: 149.0.7827.54 (42ce21f112d0..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64308}, goog:processID: 53624, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64308/devtoo..., se:cdpVersion: 149.0.7827.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 84dd176e4edabedc8049f8788c73e221]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[data-test='error']"}
@@ -266,9 +266,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d5650d141ffebc90f49a7051f4651ac3, findElement {value=[data-test='error'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.54, chrome: {chromedriverVersion: 149.0.7827.54 (42ce21f112d0..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60841}, goog:processID: 58352, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60841/devtoo..., se:cdpVersion: 149.0.7827.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d5650d141ffebc90f49a7051f4651ac3
+Command: [84dd176e4edabedc8049f8788c73e221, findElement {using=css selector, value=[data-test='error']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.54, chrome: {chromedriverVersion: 149.0.7827.54 (42ce21f112d0..., userDataDir: C:\Users\ahmed\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64308}, goog:processID: 53624, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64308/devtoo..., se:cdpVersion: 149.0.7827.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 84dd176e4edabedc8049f8788c73e221
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -316,15 +316,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllUserProfilesMatrix -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:30:29 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:30:30 GMT+02:00" duration-ms="178" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:37 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:35:37 GMT+02:00" duration-ms="160" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:30:30 GMT+02:00" name="setUp" finished-at="2026-06-06T22:30:32 GMT+02:00" duration-ms="2223" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:37 GMT+02:00" name="setUp" finished-at="2026-06-06T22:35:40 GMT+02:00" duration-ms="2870" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:30:32 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:30:33 GMT+02:00" duration-ms="898" status="FAIL">
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:40 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute E2E Checkout for all valid user profiles dynamic matrix" data-provider="userMatrixData" finished-at="2026-06-06T22:35:40 GMT+02:00" duration-ms="763" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -344,10 +344,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Financial Data Error for user: visual_user expected [$9.39] but found [$29.99]]]>
+              <![CDATA[Financial Data Error for user: visual_user expected [$27.01] but found [$29.99]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Financial Data Error for user: visual_user expected [$9.39] but found [$29.99]
+              <![CDATA[java.lang.AssertionError: Financial Data Error for user: visual_user expected [$27.01] but found [$29.99]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -386,7 +386,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllUserProfilesMatrix -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:30:33 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:30:33 GMT+02:00" duration-ms="192" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:35:40 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:35:40 GMT+02:00" duration-ms="140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
