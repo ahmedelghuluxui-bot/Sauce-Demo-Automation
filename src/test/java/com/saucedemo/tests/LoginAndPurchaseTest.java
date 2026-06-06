@@ -59,25 +59,34 @@ public class LoginAndPurchaseTest {
         p(); 
     }
 
-    // WORKFLOW 1: End-to-End Successful Purchase
-    @Test(priority = 1, description = "Verify user can login and complete a successful purchase workflow")
+ // WORKFLOW 1: End-to-End Successful Purchase with Product Integrity Validation
+    @Test(priority = 1, description = "Verify user can login, add a specific product, and validate its data integrity at checkout")
     public void testSuccessfulPurchaseWorkflow() {
+        // 1. تسجيل الدخول
         loginPage.loginToApplication("standard_user", "secret_sauce");
         p();
         
         Assert.assertTrue(inventoryPage.isTitleDisplayed(), "Login failed: Products page title is not displayed!");
 
+        // 🔥 [التعديل الجديد]: جلب وحفظ اسم وسعر المنتج ديناميكياً قبل إضافته للسلة
+        String expectedName = inventoryPage.getFirstProductName();
+        String expectedPrice = inventoryPage.getFirstProductPrice();
+        System.out.println("Expected Product: " + expectedName + " | Price: " + expectedPrice);
+
+        // 2. إضافة المنتج إلى السلة
         inventoryPage.addBackpackToCart();
         p();
         
         Assert.assertEquals(inventoryPage.getCartItemsCount(), "1", "Cart badge count did not update correctly!");
 
+        // 3. الذهاب إلى السلة والبدء في إجراءات الدفع
         inventoryPage.clickCart();
         p();
         
         driver.findElement(By.id("checkout")).click(); 
         p();
         
+        // 4. تعبئة بيانات الشحن
         driver.findElement(By.id("first-name")).sendKeys("Ahmed");
         driver.findElement(By.id("last-name")).sendKeys("QA Solo Project");
         driver.findElement(By.id("postal-code")).sendKeys("12345");
@@ -86,6 +95,16 @@ public class LoginAndPurchaseTest {
         driver.findElement(By.id("continue")).click();
         p();
         
+        // 🔥 [التعديل الجديد]: قراءة البيانات المكتوبة في صفحة Checkout Overview للتحقق منها
+        String actualName = driver.findElement(By.className("inventory_item_name")).getText();
+        String actualPrice = driver.findElement(By.className("inventory_item_price")).getText();
+        System.out.println("Actual Checkout Product: " + actualName + " | Price: " + actualPrice);
+
+        // 🔥 [الـ Assertions الحاسمة]: التأكد التام من تطابق المنتج المضاف مع المنتج الذي يتم محاسبته
+        Assert.assertEquals(actualName, expectedName, "Security/Data Error: The product name at checkout does not match the added product!");
+        Assert.assertEquals(actualPrice, expectedPrice, "Financial/Data Error: The product price at checkout does not match the original price!");
+
+        // 5. إنهاء عملية الشراء بعد الاطمئنان على سلامة البيانات
         driver.findElement(By.id("finish")).click();
         p();         
         String successMessage = driver.findElement(By.className("complete-header")).getText();
