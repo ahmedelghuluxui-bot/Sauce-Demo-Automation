@@ -1,45 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-06T21:54:15 GMT+02:00" name="Default suite" finished-at="2026-06-06T21:54:27 GMT+02:00" duration-ms="11553">
+  <suite started-at="2026-06-06T22:00:42 GMT+02:00" name="Default suite" finished-at="2026-06-06T22:01:14 GMT+02:00" duration-ms="31175">
     <groups>
     </groups>
-    <test started-at="2026-06-06T21:54:15 GMT+02:00" name="Default test" finished-at="2026-06-06T21:54:27 GMT+02:00" duration-ms="11553">
+    <test started-at="2026-06-06T22:00:42 GMT+02:00" name="Default test" finished-at="2026-06-06T22:01:14 GMT+02:00" duration-ms="31175">
       <class name="com.saucedemo.tests.LoginAndPurchaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@8f4ea7c]" started-at="2026-06-06T21:54:15 GMT+02:00" name="setUp" finished-at="2026-06-06T21:54:19 GMT+02:00" duration-ms="3561" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:43 GMT+02:00" name="setUp" finished-at="2026-06-06T22:00:45 GMT+02:00" duration-ms="2818" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSuccessfulPurchaseWorkflow()[pri:1, instance:com.saucedemo.tests.LoginAndPurchaseTest@8f4ea7c]" started-at="2026-06-06T21:54:19 GMT+02:00" name="testSuccessfulPurchaseWorkflow" description="Verify user can login and complete a successful purchase workflow" finished-at="2026-06-06T21:54:20 GMT+02:00" duration-ms="893" status="PASS">
+        <test-method signature="testSuccessfulPurchaseWorkflow()[pri:1, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:45 GMT+02:00" name="testSuccessfulPurchaseWorkflow" description="Verify user can login and complete a successful purchase workflow" finished-at="2026-06-06T22:00:46 GMT+02:00" duration-ms="848" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSuccessfulPurchaseWorkflow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@8f4ea7c]" started-at="2026-06-06T21:54:20 GMT+02:00" name="tearDown" finished-at="2026-06-06T21:54:20 GMT+02:00" duration-ms="187" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:46 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:00:46 GMT+02:00" duration-ms="167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@8f4ea7c]" started-at="2026-06-06T21:54:20 GMT+02:00" name="setUp" finished-at="2026-06-06T21:54:23 GMT+02:00" duration-ms="2647" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:46 GMT+02:00" name="setUp" finished-at="2026-06-06T22:00:49 GMT+02:00" duration-ms="2212" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLockedOutUserWorkflow()[pri:2, instance:com.saucedemo.tests.LoginAndPurchaseTest@8f4ea7c]" started-at="2026-06-06T21:54:23 GMT+02:00" name="testLockedOutUserWorkflow" description="Verify appropriate error message is displayed for locked out users" finished-at="2026-06-06T21:54:23 GMT+02:00" duration-ms="246" status="PASS">
+        <test-method signature="testLockedOutUserWorkflow()[pri:2, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:49 GMT+02:00" name="testLockedOutUserWorkflow" description="Verify appropriate error message is displayed for locked out users" finished-at="2026-06-06T22:00:49 GMT+02:00" duration-ms="233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLockedOutUserWorkflow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@8f4ea7c]" started-at="2026-06-06T21:54:23 GMT+02:00" name="tearDown" finished-at="2026-06-06T21:54:23 GMT+02:00" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:49 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:00:49 GMT+02:00" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@8f4ea7c]" started-at="2026-06-06T21:54:23 GMT+02:00" name="setUp" finished-at="2026-06-06T21:54:25 GMT+02:00" duration-ms="2225" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:49 GMT+02:00" name="setUp" finished-at="2026-06-06T22:00:51 GMT+02:00" duration-ms="2377" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAllProductsDynamicStructure()[pri:3, instance:com.saucedemo.tests.LoginAndPurchaseTest@8f4ea7c]" started-at="2026-06-06T21:54:25 GMT+02:00" name="testAllProductsDynamicStructure" description="Loop through all products and validate their details page structure" finished-at="2026-06-06T21:54:27 GMT+02:00" duration-ms="1383" status="PASS">
+        <test-method signature="testAllProductsDynamicStructure()[pri:3, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:51 GMT+02:00" name="testAllProductsDynamicStructure" description="Loop through all products and validate their details page structure" finished-at="2026-06-06T22:00:53 GMT+02:00" duration-ms="1376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAllProductsDynamicStructure -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@8f4ea7c]" started-at="2026-06-06T21:54:27 GMT+02:00" name="tearDown" finished-at="2026-06-06T21:54:27 GMT+02:00" duration-ms="172" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:53 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:00:53 GMT+02:00" duration-ms="172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:53 GMT+02:00" name="setUp" finished-at="2026-06-06T22:00:55 GMT+02:00" duration-ms="2273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:55 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute Data-Driven testing for all accepted application user profiles" data-provider="userMatrixData" finished-at="2026-06-06T22:00:55 GMT+02:00" duration-ms="262" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllUserProfilesMatrix -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:55 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:00:56 GMT+02:00" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:56 GMT+02:00" name="setUp" finished-at="2026-06-06T22:00:58 GMT+02:00" duration-ms="2172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:58 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute Data-Driven testing for all accepted application user profiles" data-provider="userMatrixData" finished-at="2026-06-06T22:00:58 GMT+02:00" duration-ms="234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[locked_out_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Epic sadface: Sorry, this user has been locked out.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllUserProfilesMatrix -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:58 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:00:58 GMT+02:00" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:00:58 GMT+02:00" name="setUp" finished-at="2026-06-06T22:01:00 GMT+02:00" duration-ms="2302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:00 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute Data-Driven testing for all accepted application user profiles" data-provider="userMatrixData" finished-at="2026-06-06T22:01:01 GMT+02:00" duration-ms="250" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[problem_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllUserProfilesMatrix -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:01 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:01:01 GMT+02:00" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:01 GMT+02:00" name="setUp" finished-at="2026-06-06T22:01:03 GMT+02:00" duration-ms="2234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:03 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute Data-Driven testing for all accepted application user profiles" data-provider="userMatrixData" finished-at="2026-06-06T22:01:08 GMT+02:00" duration-ms="5297" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[performance_glitch_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllUserProfilesMatrix -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:08 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:01:08 GMT+02:00" duration-ms="153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:08 GMT+02:00" name="setUp" finished-at="2026-06-06T22:01:11 GMT+02:00" duration-ms="2202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:11 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute Data-Driven testing for all accepted application user profiles" data-provider="userMatrixData" finished-at="2026-06-06T22:01:11 GMT+02:00" duration-ms="247" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[error_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllUserProfilesMatrix -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:11 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:01:11 GMT+02:00" duration-ms="148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:11 GMT+02:00" name="setUp" finished-at="2026-06-06T22:01:13 GMT+02:00" duration-ms="2173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAllUserProfilesMatrix(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:13 GMT+02:00" name="testAllUserProfilesMatrix" description="Execute Data-Driven testing for all accepted application user profiles" data-provider="userMatrixData" finished-at="2026-06-06T22:01:14 GMT+02:00" duration-ms="247" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[visual_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAllUserProfilesMatrix -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@5b8dfcc1]" started-at="2026-06-06T22:01:14 GMT+02:00" name="tearDown" finished-at="2026-06-06T22:01:14 GMT+02:00" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

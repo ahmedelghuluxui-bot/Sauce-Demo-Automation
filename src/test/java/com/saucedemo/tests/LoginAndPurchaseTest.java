@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import com.saucedemo.pages.InventoryPage;
 import com.saucedemo.pages.LoginPage;
 import com.saucedemo.pages.ProductDetailsPage;
+import org.testng.annotations.DataProvider;
 
 public class LoginAndPurchaseTest {
     
@@ -32,17 +33,20 @@ public class LoginAndPurchaseTest {
         // 1. إنشاء خيارات مخصصة لمتصفح جوجل كروم
         ChromeOptions options = new ChromeOptions();
         
-        // 2. تعطيل ميزة فحص تسريب واسترجاع كلمات المرور (الحل الجذري)
+        // 2. تفعيل وضع التصفح الخفي لمنع النافذة نهائياً وعزل الكاش
+        options.addArguments("--incognito");
+        
+        // 3. الإعدادات الاحتياطية الإضافية لتعطيل النوافذ
         options.addArguments("--disable-features=PasswordLeakDetection");
         options.addArguments("--disable-popup-blocking");
         
-        // 3. منع مدير كلمات المرور الداخلي في كروم من إظهار أي نوافذ لحفظ أو فحص الحسابات
+        // 4. منع مدير كلمات المرور الداخلي من العمل
         java.util.Map<String, Object> prefs = new java.util.HashMap<>();
         prefs.put("credentials_enable_service", false);
         prefs.put("profile.password_manager_enabled", false);
         options.setExperimentalOption("prefs", prefs);
         
-        // 4. تشغيل الكروم وتمرير الإعدادات المحصنة إليه
+        // 5. تشغيل الكروم وتمرير الإعدادات المحصنة إليه
         driver = new ChromeDriver(options); 
         
         driver.manage().window().maximize();
@@ -125,6 +129,36 @@ public class LoginAndPurchaseTest {
     public void tearDown() {
         if (driver != null) {
             driver.quit();
+        }
+    }
+ // 1. الداتا بروفايدر: يحمل اسم المستخدم، كلمة المرور، ونوع الحالة (success أو اسم الإيرور المتوقع)
+    @DataProvider(name = "userMatrixData")
+    public Object[][] getUserData() {
+        return new Object[][] {
+            { "standard_user", "secret_sauce", "success" },
+            { "locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out." },
+            { "problem_user", "secret_sauce", "success" }, // مستخدم يواجه مشاكل في الصور ولكنه يسجل الدخول
+            { "performance_glitch_user", "secret_sauce", "success" }, // مستخدم يواجه تأخير زمني ولكنه يدخل
+            { "error_user", "secret_sauce", "success" }, // مستخدم يواجه أخطاء برمجية عند الضغط ولكنه يدخل
+            { "visual_user", "secret_sauce", "success" } // مستخدم يرى عيوب في التصميم ولكنه يدخل
+        };
+    }
+
+    // 2. التست كيس الشاملة التي تقرأ من الداتا بروفايدر وتفحص الحالات الستة تلقائياً
+    @Test(dataProvider = "userMatrixData", priority = 4, description = "Execute Data-Driven testing for all accepted application user profiles")
+    public void testAllUserProfilesMatrix(String username, String password, String expectedResult) {
+        
+        // تنفيذ عملية تسجيل الدخول
+        loginPage.loginToApplication(username, password);
+        p(); // انتظر 3 ثوانٍ لتشاهد الحالة أمامك
+
+        if (expectedResult.equals("success")) {
+            // إذا كانت الحالة متوقع لها النجاح: نتحقق من فتح صفحة المنتجات بنجاح وعنوانها ظاهر
+            Assert.assertTrue(inventoryPage.isTitleDisplayed(), "Data-Driven Failure: User '" + username + "' was expected to login successfully but failed!");
+        } else {
+            // إذا كانت الحالة متوقع لها الفشل (مثل locked_out_user): نتحقق من رسالة الخطأ المطابقة تماماً
+            String actualError = loginPage.getErrorMessageText();
+            Assert.assertEquals(actualError, expectedResult, "Data-Driven Failure: Error message for '" + username + "' did not match expectations!");
         }
     }
 }
