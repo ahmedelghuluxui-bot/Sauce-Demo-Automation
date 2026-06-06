@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-05T10:38:22 GMT+02:00" name="Default suite" finished-at="2026-06-05T10:38:59 GMT+02:00" duration-ms="37202">
+  <suite started-at="2026-06-05T18:00:25 GMT+02:00" name="Default suite" finished-at="2026-06-05T18:02:13 GMT+02:00" duration-ms="108367">
     <groups>
     </groups>
-    <test started-at="2026-06-05T10:38:22 GMT+02:00" name="Default test" finished-at="2026-06-05T10:38:59 GMT+02:00" duration-ms="37202">
+    <test started-at="2026-06-05T18:00:25 GMT+02:00" name="Default test" finished-at="2026-06-05T18:02:13 GMT+02:00" duration-ms="108367">
       <class name="com.saucedemo.tests.LoginAndPurchaseTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T10:38:22 GMT+02:00" name="setUp" finished-at="2026-06-05T10:38:28 GMT+02:00" duration-ms="6610" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T18:00:25 GMT+02:00" name="setUp" finished-at="2026-06-05T18:00:44 GMT+02:00" duration-ms="18515" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSuccessfulPurchaseWorkflow()[pri:1, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T10:38:28 GMT+02:00" name="testSuccessfulPurchaseWorkflow" description="Verify user can login and complete a successful purchase workflow" finished-at="2026-06-05T10:38:50 GMT+02:00" duration-ms="21845" status="PASS">
+        <test-method signature="testSuccessfulPurchaseWorkflow()[pri:1, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T18:00:44 GMT+02:00" name="testSuccessfulPurchaseWorkflow" description="Verify user can login and complete a successful purchase workflow" finished-at="2026-06-05T18:01:49 GMT+02:00" duration-ms="65168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSuccessfulPurchaseWorkflow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T10:38:50 GMT+02:00" name="tearDown" finished-at="2026-06-05T10:38:50 GMT+02:00" duration-ms="200" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T18:01:49 GMT+02:00" name="tearDown" finished-at="2026-06-05T18:01:49 GMT+02:00" duration-ms="519" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T10:38:50 GMT+02:00" name="setUp" finished-at="2026-06-05T10:38:56 GMT+02:00" duration-ms="5078" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T18:01:49 GMT+02:00" name="setUp" finished-at="2026-06-05T18:02:04 GMT+02:00" duration-ms="14165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLockedOutUserWorkflow()[pri:2, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T10:38:56 GMT+02:00" name="testLockedOutUserWorkflow" description="Verify appropriate error message is displayed for locked out users" finished-at="2026-06-05T10:38:59 GMT+02:00" duration-ms="3227" status="PASS">
+        <test-method signature="testLockedOutUserWorkflow()[pri:2, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T18:02:04 GMT+02:00" name="testLockedOutUserWorkflow" description="Verify appropriate error message is displayed for locked out users" finished-at="2026-06-05T18:02:13 GMT+02:00" duration-ms="9527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLockedOutUserWorkflow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T10:38:59 GMT+02:00" name="tearDown" finished-at="2026-06-05T10:38:59 GMT+02:00" duration-ms="192" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginAndPurchaseTest@223d2c72]" started-at="2026-06-05T18:02:13 GMT+02:00" name="tearDown" finished-at="2026-06-05T18:02:13 GMT+02:00" duration-ms="384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

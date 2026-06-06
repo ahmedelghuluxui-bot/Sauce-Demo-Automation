@@ -18,10 +18,10 @@ public class LoginAndPurchaseTest {
     InventoryPage inventoryPage;
 
     public void p() {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+      try {
+       Thread.sleep(9000);
+       } catch (InterruptedException e) {
+          e.printStackTrace();
         }
     }
 
