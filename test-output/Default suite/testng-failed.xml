@@ -6,7 +6,7 @@
       <class name="com.saucedemo.tests.LoginAndPurchaseTest">
         <methods>
           <include name="tearDown"/>
-          <include name="testSuccessfulPurchaseWorkflow"/>
+          <include name="testAllProductsDynamicStructure"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.saucedemo.tests.LoginAndPurchaseTest -->

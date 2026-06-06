@@ -4,6 +4,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions; 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,7 +21,7 @@ public class LoginAndPurchaseTest {
     ProductDetailsPage productDetailsPage;
     public void p() {
       try {
-       Thread.sleep(9000);
+       Thread.sleep(0);
        } catch (InterruptedException e) {
           e.printStackTrace();
         }
@@ -28,15 +29,17 @@ public class LoginAndPurchaseTest {
 
     @BeforeMethod
     public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        ChromeOptions options = new ChromeOptions();
+                options.addArguments("--disable-features=PasswordLeakDetection");
+        options.addArguments("--disable-popup-blocking");
+                driver = new ChromeDriver(options); 
+                driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.saucedemo.com/");
-        
-        loginPage = new LoginPage(driver);
+                loginPage = new LoginPage(driver);
         inventoryPage = new InventoryPage(driver);
-        p(); 
         productDetailsPage = new ProductDetailsPage(driver);
+        p(); 
     }
 
     // WORKFLOW 1: End-to-End Successful Purchase
