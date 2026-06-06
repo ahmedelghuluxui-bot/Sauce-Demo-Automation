@@ -83,6 +83,27 @@ public class LoginAndPurchaseTest {
         
         Assert.assertEquals(actualError, expectedError, "The expected validation error for locked out user did not match!");
     }
+    @Test(priority = 3, description = "Loop through all products and validate their details page structure")
+    public void testAllProductsDynamicStructure() {
+        loginPage.loginToApplication("standard_user", "secret_sauce");
+        p();
+        
+        int totalProducts = inventoryPage.getProductsCount();
+        System.out.println("Total products found to validate: " + totalProducts);
+
+        for (int i = 0; i < totalProducts; i++) {
+            inventoryPage.clickProductByIndex(i);
+            p(); 
+
+            Assert.assertTrue(productDetailsPage.isNameDisplayed(), "Product name is missing at index: " + i);
+            Assert.assertTrue(productDetailsPage.isDescriptionDisplayed(), "Product description is missing at index: " + i);
+            Assert.assertTrue(productDetailsPage.isPriceDisplayed(), "Product price is missing at index: " + i);
+            Assert.assertTrue(productDetailsPage.isActionButtonDisplayed(), "Product Add/Remove button is missing at index: " + i);
+
+            productDetailsPage.clickBackToProducts();
+            p(); 
+        }
+    }
 
     @AfterMethod
     public void tearDown() {
