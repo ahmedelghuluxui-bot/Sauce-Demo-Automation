@@ -5,8 +5,8 @@
     <classes>
       <class name="com.saucedemo.tests.LoginAndPurchaseTest">
         <methods>
+          <include name="testAllUserProfilesMatrix" invocation-numbers="2 4 5"/>
           <include name="tearDown"/>
-          <include name="testAllProductsDynamicStructure"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.saucedemo.tests.LoginAndPurchaseTest -->

@@ -30,23 +30,18 @@ public class LoginAndPurchaseTest {
 
     @BeforeMethod
     public void setUp() {
-        // 1. إنشاء خيارات مخصصة لمتصفح جوجل كروم
         ChromeOptions options = new ChromeOptions();
         
-        // 2. تفعيل وضع التصفح الخفي لمنع النافذة نهائياً وعزل الكاش
         options.addArguments("--incognito");
         
-        // 3. الإعدادات الاحتياطية الإضافية لتعطيل النوافذ
         options.addArguments("--disable-features=PasswordLeakDetection");
         options.addArguments("--disable-popup-blocking");
         
-        // 4. منع مدير كلمات المرور الداخلي من العمل
         java.util.Map<String, Object> prefs = new java.util.HashMap<>();
         prefs.put("credentials_enable_service", false);
         prefs.put("profile.password_manager_enabled", false);
         options.setExperimentalOption("prefs", prefs);
         
-        // 5. تشغيل الكروم وتمرير الإعدادات المحصنة إليه
         driver = new ChromeDriver(options); 
         
         driver.manage().window().maximize();
@@ -62,31 +57,25 @@ public class LoginAndPurchaseTest {
  // WORKFLOW 1: End-to-End Successful Purchase with Product Integrity Validation
     @Test(priority = 1, description = "Verify user can login, add a specific product, and validate its data integrity at checkout")
     public void testSuccessfulPurchaseWorkflow() {
-        // 1. تسجيل الدخول
         loginPage.loginToApplication("standard_user", "secret_sauce");
         p();
-        
         Assert.assertTrue(inventoryPage.isTitleDisplayed(), "Login failed: Products page title is not displayed!");
 
-        // 🔥 [التعديل الجديد]: جلب وحفظ اسم وسعر المنتج ديناميكياً قبل إضافته للسلة
         String expectedName = inventoryPage.getFirstProductName();
         String expectedPrice = inventoryPage.getFirstProductPrice();
         System.out.println("Expected Product: " + expectedName + " | Price: " + expectedPrice);
 
-        // 2. إضافة المنتج إلى السلة
         inventoryPage.addBackpackToCart();
         p();
         
         Assert.assertEquals(inventoryPage.getCartItemsCount(), "1", "Cart badge count did not update correctly!");
 
-        // 3. الذهاب إلى السلة والبدء في إجراءات الدفع
         inventoryPage.clickCart();
         p();
         
         driver.findElement(By.id("checkout")).click(); 
         p();
         
-        // 4. تعبئة بيانات الشحن
         driver.findElement(By.id("first-name")).sendKeys("Ahmed");
         driver.findElement(By.id("last-name")).sendKeys("QA Solo Project");
         driver.findElement(By.id("postal-code")).sendKeys("12345");
@@ -95,16 +84,13 @@ public class LoginAndPurchaseTest {
         driver.findElement(By.id("continue")).click();
         p();
         
-        // 🔥 [التعديل الجديد]: قراءة البيانات المكتوبة في صفحة Checkout Overview للتحقق منها
         String actualName = driver.findElement(By.className("inventory_item_name")).getText();
         String actualPrice = driver.findElement(By.className("inventory_item_price")).getText();
         System.out.println("Actual Checkout Product: " + actualName + " | Price: " + actualPrice);
 
-        // 🔥 [الـ Assertions الحاسمة]: التأكد التام من تطابق المنتج المضاف مع المنتج الذي يتم محاسبته
         Assert.assertEquals(actualName, expectedName, "Security/Data Error: The product name at checkout does not match the added product!");
         Assert.assertEquals(actualPrice, expectedPrice, "Financial/Data Error: The product price at checkout does not match the original price!");
 
-        // 5. إنهاء عملية الشراء بعد الاطمئنان على سلامة البيانات
         driver.findElement(By.id("finish")).click();
         p();         
         String successMessage = driver.findElement(By.className("complete-header")).getText();
@@ -150,34 +136,80 @@ public class LoginAndPurchaseTest {
             driver.quit();
         }
     }
- // 1. الداتا بروفايدر: يحمل اسم المستخدم، كلمة المرور، ونوع الحالة (success أو اسم الإيرور المتوقع)
     @DataProvider(name = "userMatrixData")
     public Object[][] getUserData() {
         return new Object[][] {
             { "standard_user", "secret_sauce", "success" },
             { "locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out." },
-            { "problem_user", "secret_sauce", "success" }, // مستخدم يواجه مشاكل في الصور ولكنه يسجل الدخول
-            { "performance_glitch_user", "secret_sauce", "success" }, // مستخدم يواجه تأخير زمني ولكنه يدخل
-            { "error_user", "secret_sauce", "success" }, // مستخدم يواجه أخطاء برمجية عند الضغط ولكنه يدخل
-            { "visual_user", "secret_sauce", "success" } // مستخدم يرى عيوب في التصميم ولكنه يدخل
+            { "problem_user", "secret_sauce", "success" }, 
+            { "performance_glitch_user", "secret_sauce", "success" }, 
+            { "error_user", "secret_sauce", "success" }, 
+            { "visual_user", "secret_sauce", "success" } 
         };
     }
 
-    // 2. التست كيس الشاملة التي تقرأ من الداتا بروفايدر وتفحص الحالات الستة تلقائياً
-    @Test(dataProvider = "userMatrixData", priority = 4, description = "Execute Data-Driven testing for all accepted application user profiles")
+    @Test(dataProvider = "userMatrixData", priority = 4, description = "Execute E2E Checkout for all valid user profiles dynamic matrix")
     public void testAllUserProfilesMatrix(String username, String password, String expectedResult) {
         
-        // تنفيذ عملية تسجيل الدخول
+        // 1. محاولة تسجيل الدخول
         loginPage.loginToApplication(username, password);
-        p(); // انتظر 3 ثوانٍ لتشاهد الحالة أمامك
+        p(); 
 
         if (expectedResult.equals("success")) {
-            // إذا كانت الحالة متوقع لها النجاح: نتحقق من فتح صفحة المنتجات بنجاح وعنوانها ظاهر
-            Assert.assertTrue(inventoryPage.isTitleDisplayed(), "Data-Driven Failure: User '" + username + "' was expected to login successfully but failed!");
+            Assert.assertTrue(inventoryPage.isTitleDisplayed(), "Login failed for: " + username);
+
+            // جلب بيانات المنتج وحفظها ديناميكياً
+            String expectedName = inventoryPage.getFirstProductName();
+            String expectedPrice = inventoryPage.getFirstProductPrice();
+
+            // 2. إضافة المنتج إلى السلة والذهاب إليها
+            inventoryPage.addBackpackToCart();
+            p();
+            inventoryPage.clickCart();
+            p();
+            
+            // 3. بدء خطوة الشيك أوت
+            driver.findElement(By.id("checkout")).click(); 
+            p();
+            
+            // 4. تعبئة بيانات المشتري
+            driver.findElement(By.id("first-name")).sendKeys("QA-" + username);
+            driver.findElement(By.id("last-name")).sendKeys("Matrix Test");
+            driver.findElement(By.id("postal-code")).sendKeys("54321");
+            p(); 
+            
+            driver.findElement(By.id("continue")).click();
+            p();
+            
+            // 🔥 [معالجة الـ Bug الذكية للـ error_user]:
+            if (username.equals("error_user")) {
+                // نتحقق من ظهور رسالة الخطأ المتوقعة بسبب عيب الموقع، ثم ننهي الفحص بنجاح لهذا الحساب!
+                String uiError = driver.findElement(By.cssSelector("[data-test='error']")).getText();
+                Assert.assertTrue(uiError.contains("Last Name is required"), "Expected error user bug was not caught!");
+                System.out.println("Successfully caught the built-in bug for error_user!");
+                return; // اخرج من الدالة وانتقل للمستخدم التالي في المصفوفة
+            }
+            
+            // 5. التحقق من سلامة البيانات للحسابات السليمة الأخرى
+            String actualName = driver.findElement(By.className("inventory_item_name")).getText();
+            String actualPrice = driver.findElement(By.className("inventory_item_price")).getText();
+            
+            Assert.assertEquals(actualName, expectedName, "Data Integrity Error for user: " + username);
+            Assert.assertEquals(actualPrice, expectedPrice, "Financial Data Error for user: " + username);
+            
+            // 6. الضغط على Finish وإغلاق الدورة
+            driver.findElement(By.id("finish")).click();
+            p();         
+            
+            String successMessage = driver.findElement(By.className("complete-header")).getText();
+            Assert.assertEquals(successMessage, "Thank you for your order!", "Checkout journey failed for user: " + username);
+            
         } else {
-            // إذا كانت الحالة متوقع لها الفشل (مثل locked_out_user): نتحقق من رسالة الخطأ المطابقة تماماً
+            // الحساب المحظور (Locked out)
             String actualError = loginPage.getErrorMessageText();
-            Assert.assertEquals(actualError, expectedResult, "Data-Driven Failure: Error message for '" + username + "' did not match expectations!");
+            Assert.assertEquals(actualError, expectedResult, "Data-Driven Failure!");
         }
+    
     }
-}
+    }
+
