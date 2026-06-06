@@ -29,14 +29,27 @@ public class LoginAndPurchaseTest {
 
     @BeforeMethod
     public void setUp() {
+        // 1. إنشاء خيارات مخصصة لمتصفح جوجل كروم
         ChromeOptions options = new ChromeOptions();
-                options.addArguments("--disable-features=PasswordLeakDetection");
+        
+        // 2. تعطيل ميزة فحص تسريب واسترجاع كلمات المرور (الحل الجذري)
+        options.addArguments("--disable-features=PasswordLeakDetection");
         options.addArguments("--disable-popup-blocking");
-                driver = new ChromeDriver(options); 
-                driver.manage().window().maximize();
+        
+        // 3. منع مدير كلمات المرور الداخلي في كروم من إظهار أي نوافذ لحفظ أو فحص الحسابات
+        java.util.Map<String, Object> prefs = new java.util.HashMap<>();
+        prefs.put("credentials_enable_service", false);
+        prefs.put("profile.password_manager_enabled", false);
+        options.setExperimentalOption("prefs", prefs);
+        
+        // 4. تشغيل الكروم وتمرير الإعدادات المحصنة إليه
+        driver = new ChromeDriver(options); 
+        
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.saucedemo.com/");
-                loginPage = new LoginPage(driver);
+        
+        loginPage = new LoginPage(driver);
         inventoryPage = new InventoryPage(driver);
         productDetailsPage = new ProductDetailsPage(driver);
         p(); 
