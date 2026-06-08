@@ -40,16 +40,13 @@ public class InventoryPage {
     public void clickProductByIndex(int index) {
         driver.findElements(productLinks).get(index).click();
     }
- // أضف هذه اللوكيتورز في الأعلى إذا لم تكن موجودة
     private By firstProductName = By.cssSelector(".inventory_item_name");
     private By firstProductPrice = By.cssSelector(".inventory_item_price");
 
-    // دالة لجلب اسم أول منتج
     public String getFirstProductName() {
         return driver.findElement(firstProductName).getText();
     }
 
-    // دالة لجلب سعر أول منتج
     public String getFirstProductPrice() {
         return driver.findElement(firstProductPrice).getText();
     }

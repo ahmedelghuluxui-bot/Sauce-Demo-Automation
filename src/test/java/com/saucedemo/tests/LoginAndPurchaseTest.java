@@ -151,28 +151,23 @@ public class LoginAndPurchaseTest {
     @Test(dataProvider = "userMatrixData", priority = 4, description = "Execute E2E Checkout for all valid user profiles dynamic matrix")
     public void testAllUserProfilesMatrix(String username, String password, String expectedResult) {
         
-        // 1. محاولة تسجيل الدخول
         loginPage.loginToApplication(username, password);
         p(); 
 
         if (expectedResult.equals("success")) {
             Assert.assertTrue(inventoryPage.isTitleDisplayed(), "Login failed for: " + username);
 
-            // جلب بيانات المنتج وحفظها ديناميكياً
             String expectedName = inventoryPage.getFirstProductName();
             String expectedPrice = inventoryPage.getFirstProductPrice();
 
-            // 2. إضافة المنتج إلى السلة والذهاب إليها
             inventoryPage.addBackpackToCart();
             p();
             inventoryPage.clickCart();
             p();
             
-            // 3. بدء خطوة الشيك أوت
             driver.findElement(By.id("checkout")).click(); 
             p();
             
-            // 4. تعبئة بيانات المشتري
             driver.findElement(By.id("first-name")).sendKeys("QA-" + username);
             driver.findElement(By.id("last-name")).sendKeys("Matrix Test");
             driver.findElement(By.id("postal-code")).sendKeys("54321");
@@ -181,23 +176,19 @@ public class LoginAndPurchaseTest {
             driver.findElement(By.id("continue")).click();
             p();
             
-            // 🔥 [معالجة الـ Bug الذكية للـ error_user]:
             if (username.equals("error_user")) {
-                // نتحقق من ظهور رسالة الخطأ المتوقعة بسبب عيب الموقع، ثم ننهي الفحص بنجاح لهذا الحساب!
                 String uiError = driver.findElement(By.cssSelector("[data-test='error']")).getText();
                 Assert.assertTrue(uiError.contains("Last Name is required"), "Expected error user bug was not caught!");
                 System.out.println("Successfully caught the built-in bug for error_user!");
-                return; // اخرج من الدالة وانتقل للمستخدم التالي في المصفوفة
+                return; 
             }
             
-            // 5. التحقق من سلامة البيانات للحسابات السليمة الأخرى
             String actualName = driver.findElement(By.className("inventory_item_name")).getText();
             String actualPrice = driver.findElement(By.className("inventory_item_price")).getText();
             
             Assert.assertEquals(actualName, expectedName, "Data Integrity Error for user: " + username);
             Assert.assertEquals(actualPrice, expectedPrice, "Financial Data Error for user: " + username);
             
-            // 6. الضغط على Finish وإغلاق الدورة
             driver.findElement(By.id("finish")).click();
             p();         
             
@@ -205,7 +196,6 @@ public class LoginAndPurchaseTest {
             Assert.assertEquals(successMessage, "Thank you for your order!", "Checkout journey failed for user: " + username);
             
         } else {
-            // الحساب المحظور (Locked out)
             String actualError = loginPage.getErrorMessageText();
             Assert.assertEquals(actualError, expectedResult, "Data-Driven Failure!");
         }
